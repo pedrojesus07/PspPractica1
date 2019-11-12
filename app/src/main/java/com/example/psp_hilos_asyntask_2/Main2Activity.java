@@ -13,7 +13,6 @@ import android.widget.TextView;
 public class Main2Activity extends AppCompatActivity {
 
     private TextView tvContador2;
-    private ProgressBar progressBar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,6 @@ public class Main2Activity extends AppCompatActivity {
 
     public void init(){
         tvContador2 = findViewById(R.id.tvContador2);
-        progressBar2 = findViewById(R.id.progressBar2);
     }
 
     class HiloAsynctask extends AsyncTask<Void, Void, Void> {
@@ -37,8 +35,7 @@ public class Main2Activity extends AppCompatActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    for (int i = 1, j = 30; i<=30; i++, j--) {
-                        progressBar2.setProgress(i);
+                    for (int j = 30; j>=0; j--) {
                         tvContador2.setText(j+"");
                         Log.v("xyz", tvContador2.getText().toString()+"Actividad2");
                         try {

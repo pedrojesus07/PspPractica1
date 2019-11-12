@@ -12,7 +12,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvContador;
-    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void init(){
         tvContador = findViewById(R.id.tvContador1);
-        progressBar = findViewById(R.id.progressBar);
     }
 
     class Hilo extends Thread {
         @Override
         public void run() {
-            for (int i = 1,j = 30; i<=30; i++, j--){
-                progressBar.setProgress(i);
+            for (int j = 30; j>=0; j--){
                 tvContador.setText(j+"");
 
                 Log.v("xyz", tvContador.getText().toString()+"Actividad1");
