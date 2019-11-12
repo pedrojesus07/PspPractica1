@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -34,8 +35,11 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 1,j = 30; i<=30; i++, j--){
                 progressBar.setProgress(i);
                 tvContador.setText(j+"");
+
+                Log.v("xyz", tvContador.getText().toString()+"Actividad1");
+
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
