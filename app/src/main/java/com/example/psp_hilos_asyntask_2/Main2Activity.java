@@ -39,6 +39,7 @@ public class Main2Activity extends AppCompatActivity {
                     for (int i = 1, j = 30; i<=30; i++, j--) {
                         progressBar2.setProgress(i);
                         tvContador2.setText(j+"");
+
                     }
                 }
             });
